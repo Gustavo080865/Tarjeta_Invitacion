@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invitación - Ceremonia de Grados | CEPRODENT Puerto Escondido</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #f7f6f4;
+      --card: #ffffff;
+      --accent: #b8892a; /* dorado suave */
+      --muted: #6b6b6b;
+      --border: rgba(184,137,42,0.12);
+      --radius: 18px;
+      --max-width: 900px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, #fbfbfb 0%, var(--bg) 100%);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+    }
+    .invitation-wrap{
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--card);
+      border-radius:20px;
+      box-shadow: 0 12px 30px rgba(16,24,40,0.08);
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      overflow:hidden;
+      border:1px solid var(--border);
+    }
+    @media (max-width:880px){
+      .invitation-wrap{grid-template-columns:1fr;}
+    }
+
+    /* LEFT: content */
+    .left{
+      padding:44px 48px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:18px;
+    }
+    .brand .logo{
+      width:72px;height:72px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--card);background:linear-gradient(135deg,#2b6ef6,#7b3bf2);box-shadow:0 6px 18px rgba(43,110,246,0.12);
+    }
+    .brand h4{margin:0;font-family:'Merriweather',serif;font-weight:700;font-size:18px;color:#0f1724}
+    .title{
+      font-family:'Merriweather',serif;
+      font-size:34px;
+      margin:8px 0 6px;
+      color:#0b1220;
+    }
+    .subtitle{color:var(--muted);margin:0 0 20px;font-size:14px}
+
+    .frame{
+      border-left:2px dashed rgba(16,24,40,0.04);
+      padding-left:30px;
+    }
+
+    .message{
+      font-size:15px;line-height:1.6;color:#2b2b2b;margin-bottom:22px;
+    }
+
+    .guests{
+      background:linear-gradient(180deg,rgba(184,137,42,0.04),transparent);
+      padding:18px;border-radius:12px;border:1px solid rgba(184,137,42,0.06);
+      margin-top:8px;
+    }
+    .guests h5{margin:0 0 10px;font-size:14px;color:#0b1220}
+    .guest-list{margin:0;padding:0;list-style:none}
+    .guest-list li{padding:8px 0;border-bottom:1px solid rgba(11,18,32,0.04);font-size:14px}
+    .guest-list li:last-child{border-bottom:none}
+
+    .details{
+      display:flex;gap:18px;margin-top:20px;flex-wrap:wrap
+    }
+    .detail{
+      background:rgba(11,18,32,0.03);
+      padding:12px 16px;border-radius:10px;font-size:14px;min-width:160px
+    }
+    .detail strong{display:block;font-family:'Merriweather',serif;font-weight:700}
+
+    .cta{
+      margin-top:26px;display:flex;gap:12px;align-items:center;
+    }
+    .btn{
+      background:var(--accent);color:white;padding:12px 20px;border-radius:12px;text-decoration:none;font-weight:600;box-shadow:0 8px 20px rgba(184,137,42,0.12);
+    }
+    .note{font-size:13px;color:var(--muted)}
+
+    /* RIGHT: decorative */
+    .right{
+      background:linear-gradient(180deg,rgba(184,137,42,0.06),transparent);
+      padding:36px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+    }
+    .seal{
+      width:160px;height:160px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:8px solid rgba(184,137,42,0.12);box-shadow:0 14px 30px rgba(16,24,40,0.06);background:linear-gradient(180deg,#fff,#fff);
+    }
+    .seal .inner{width:120px;height:120px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f9f6f1,#fff);font-family:'Merriweather',serif;font-weight:700;color:var(--accent);font-size:22px}
+    .logo-small{font-weight:700;font-size:13px;color:var(--muted);}
+
+    /* footer / print */
+    .small-print{font-size:12px;color:var(--muted);margin-top:14px;text-align:center}
+
+    @media print{
+      body{padding:0}
+      .invitation-wrap{box-shadow:none;border:none;max-width:700px;}
+      .right{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="invitation-wrap" role="article" aria-label="Invitación ceremonia de grados CEPRODENT Puerto Escondido">
+    <div class="left">
+      <div class="brand">
+        <div class="logo">C</div>
+        <div>
+          <h4>CEPRODENT Puerto Escondido</h4>
+          <p class="subtitle">Ceremonia de Grados 2025</p>
+        </div>
+      </div>
+
+      <h1 class="title">Usted está cordialmente invitado</h1>
+      <p class="message">La Dirección de <strong>CEPRODENT Puerto Escondido</strong> tiene el honor de invitarle a la ceremonia de grados que celebrará el esfuerzo y la dedicación de nuestras egresadas y egresados.</p>
+
+      <div class="frame">
+        <p class="message">Este acto contará con la distinguida presencia de las siguientes autoridades e invitados especiales:</p>
+
+        <div class="guests" aria-labelledby="invitados">
+          <h5 id="invitados">Invitados de honor</h5>
+          <ul class="guest-list">
+            <li>1. La Gerente del CAMU Puerto Escondido</li>
+            <li>2. Alcaldesa de Puerto Escondido</li>
+            <li>3. Secretaria de Educación Puerto Escondido</li>
+            <li>4. Rector Institución Educativa Puerto Escondido</li>
+            <li>5. Secretaria Institución Educativa Puerto Escondido</li>
+          </ul>
+        </div>
+
+        <div class="details">
+          <div class="detail"><strong>Fecha:</strong> Sábado, 20 de diciembre de 2025</div>
+          <div class="detail"><strong>Hora:</strong> 10:00 a.m.</div>
+          <div class="detail"><strong>Lugar:</strong> Auditorio CEPRODENT Puerto Escondido</div>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="#">Confirmar asistencia</a>
+          <div class="note">Se ruega puntualidad. Código de vestimenta: formal.</div>
+        </div>
+
+        <p class="small-print">Para más información comuníquese con la secretaría de CEPRODENT.</p>
+      </div>
+    </div>
+
+    <aside class="right" aria-hidden="true">
+      <div class="seal" role="img" aria-label="Sello ceremonial CEPRODENT">
+        <div class="inner">CEPRODENT</div>
+      </div>
+      <div class="logo-small">Ceremonia de Grados • Puerto Escondido</div>
+      <p class="small-print">Dirección: Carrera Principal #123 • Tel: (000) 000-0000</p>
+    </aside>
+  </div>
+</body>
+</html>
